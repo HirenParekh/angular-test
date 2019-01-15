@@ -1,0 +1,20 @@
+<div class="add-data-wrapper">
+  <form class="form-inline" [formGroup]="addDataForm">
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+        <input type="text" formControlName="title" class="form-control" placeholder="Title" required>
+      </div>
+      <div class="col-sm-4">
+        <input type="text" formControlName="text" class="form-control" placeholder="Text" required>
+      </div>
+      <div class="col-sm-2">
+        <app-color-picker (colorSelectionEvent)=onItemColorChanged($event)></app-color-picker>
+      </div>
+      <div class="col-sm-2">
+        <button type="submit" class="btn btn-primary" (click)="onBtnAddDataClick()">Add Data</button>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>

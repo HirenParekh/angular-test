@@ -1,0 +1,1 @@
+export const dataColors = ['#BF360C','#FF9800','#CDDC39','#4CAF50','#00BCD4','#2196F3','#673AB7','#E91E63']

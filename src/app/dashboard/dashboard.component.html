@@ -1,0 +1,40 @@
+<!-- Sidebar component -->
+<app-sidebar [dataObjects]="dataObjects" (itemSelectionEvent)="onItemSelectionEventHandler($event)"></app-sidebar>
+
+
+<div id="main-content">
+  <!-- main table list -->
+  <div class="table-data-wrapper app-card">
+      <div class="table-responsive">
+    <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Text</th>
+            <th scope="col">Color</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of dataObjects" [class.active]="selectedDataObj?.id == row.id">
+                <td>#{{row.id}}</td>
+                <td>{{row.title}}</td>
+                <td>{{row.text}}</td>
+                <td> <app-color-picker [selectedColor]="row.color" (colorSelectionEvent)=onItemColorChanged($event,row)></app-color-picker></td>
+                <td class="action-column"><button type="button" class="btn btn-danger" (click)="onBtnDeleteItemClick(row)">&times;</button></td>
+              </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="text-area-wrapper app-card">
+    <app-add-data (addNewDataEvent)="onAddNewDataEventHandler($event)"></app-add-data>
+  </div>
+
+  <div class="text-area-wrapper app-card" *ngIf="selectedDataObj">
+    <textarea [(ngModel)]="selectedDataObj.text"></textarea>
+  </div>
+</div>
+

@@ -1,0 +1,23 @@
+#main-content{
+    margin-left: 300px;
+    padding: 20px;
+}
+
+.table-data-wrapper{
+    margin-bottom: 15px;
+}
+
+table td{
+    vertical-align: middle;
+   }
+
+.text-area-wrapper textarea{
+    width: 100%;
+    height: 150px;
+}
+
+@media(max-width:768px){
+    #main-content{
+        margin-left: 0px;
+    }
+}

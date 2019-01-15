@@ -1,0 +1,13 @@
+<div class="color-picker-wapper">
+    <div class="dropdown color-picker-wapper">
+        <a class="btn btn-outline p-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="single-color" [style.background-color]="selectedColor"></div> {{selectedColor}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#" *ngFor="let color of colors" (click)="onColorSelect(color)">
+            <div class="single-color"  [style.background-color]="color" ></div> {{color}}
+          </a>
+        </div>
+      </div>  
+</div>
+

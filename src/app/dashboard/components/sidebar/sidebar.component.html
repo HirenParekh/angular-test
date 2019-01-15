@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <ul class="data-list">
+    <li class="list-item" *ngFor="let currObj of dataObjects" (click)="onItemSelect(currObj)" [class.active]="selectedItem?.id === currObj.id">
+      <div class="data-color" [style.background-color]="currObj.color"></div>
+      <div class="data-id">
+        #{{currObj.id}}
+      </div>
+      <div class="data-info">
+        <div class="data-title">
+          {{currObj.title}}
+        </div>
+        <div class="data-text">
+          {{currObj.text}}
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
