@@ -49,7 +49,10 @@
 }
 @media(max-width:768px){
  .sidebar{
-        left: -300px;
-        transition: left 0.2s ease-in-out;
+        width: 50px;
+        transition: width 0.2s ease-in-out;
     }
+  .data-info{
+    display: none;
+  }
 }
